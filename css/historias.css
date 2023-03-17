@@ -1,0 +1,203 @@
+h1 {
+    font-weight: normal;
+    margin: 0;
+    border-style: solid;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1em;
+    clear: both;
+}
+
+h1 {
+    font-size: 80px;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.versos h2 {
+    text-align: right;
+    float: right;
+}
+
+#branca-de-neve h1 {
+    padding-top: 0.1em;
+    background-color: rgb(255, 128, 255);
+    border-color: rgb(255, 0, 255);
+    color: white;
+}
+
+#os-tres-porquinhos h1 {
+    background-color: rgb(255, 255, 0);
+    border-color: rgb(128, 128, 0);
+    color: black;
+    padding-bottom: 0.1em;
+}
+
+#chapeuzinho-vermelho h1 {
+    background-color: rgb(255, 128, 128);
+    border-color: rgb(128, 0, 0);
+    color: rgb(128, 0, 0);
+    padding-bottom: 0.1em;
+}
+
+#anunciacao h1 {
+    background-color: rgb(128, 255, 255);
+    border-color: rgb(0, 128, 128);
+    color: rgb(0, 128, 128);
+    padding-bottom: 0.15em;
+}
+
+#andanca h1 {
+    background-color: rgb(192, 128, 255);
+    border-color: rgb(64, 0, 128);
+    color: rgb(64, 0, 128);
+    padding-bottom: 0.15em;
+}
+
+#pai-nosso h1 {
+    background-image: url("https://images.unsplash.com/photo-1601297183305-6df142704ea2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+    background-size: cover;
+    border-color: rgb(0, 0, 128);
+    color: white;
+}
+
+#dancing-queen h1 {
+    background-color: black;
+    border-color: rgb(255, 0, 255);
+    color: rgb(255, 0, 255);
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+}
+
+#bolo h1 {
+    background-color: rgb(128, 64, 0);
+    border-color: rgb(96, 48, 0);
+    color: black;
+    padding-top: 0.1em;
+}
+
+#tabela-periodica h1 {
+    background-color: rgb(128, 255, 0);
+    border-color: rgb(0, 128, 0);
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+    font-family: "Lobster";
+}
+
+#os-tres-porquinhos {
+    font-family: "Slime Box";
+}
+
+#branca-de-neve {
+    font-family: "Chopin Script";
+}
+
+#chapeuzinho-vermelho {
+    font-family: "Fairy Playground";
+}
+
+#anunciacao {
+    font-family: "Dancing Script";
+}
+
+#andanca {
+    font-family: "Caveat";
+}
+
+#dancing-queen {
+    font-family: "Rochester";
+}
+
+#bolo {
+    font-family: "Seaweed Script";
+}
+
+#pai-nosso {
+    font-family: "Cinzel";
+}
+
+#pai-nosso p {
+    text-align: center;
+}
+
+.estrofe:not(article > .estrofe:first-of-type) {
+    margin-top: 2em;
+}
+
+.estrofe:not(article > .estrofe:last-of-type) {
+    margin-bottom: 2em;
+}
+
+.conto > p:first-of-type {
+    text-indent: 0;
+}
+
+.conto > p:first-of-type::first-letter { */
+    font-family: "Royal";
+    font-size: 400%;
+    font-weight: normal;
+    line-height: 0.7em;
+    margin-top: 0.2em;
+    margin-bottom: -0.3em;
+    display: inline-block;
+    margin-left: 0;
+}
+
+.conto p {
+    text-indent: 1.25cm;
+}
+
+article p, li {
+    line-height: 1em;
+    font-size: 200%;
+    text-align: justify;
+    margin: 0;
+}
+
+.conto blockquote {
+    position: relative;
+    padding: 0 80px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: #eee;
+    display: inline-block;
+}
+
+.conto blockquote::before, .conto blockquote::after {
+    background-color: #ccc;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 1.3;
+    font-size: 4em;
+    border-radius: 100%;
+    text-align: center;
+    position: absolute;
+    font-family: serif;
+}
+
+.conto blockquote::before {
+    content: "“";
+    top: 0;
+    left: 0;
+}
+
+.conto blockquote::after {
+    content: "”";
+    bottom: 0;
+    right: 0;
+}
+
+.conto blockquote p {
+    text-indent: 0;
+}

@@ -1,0 +1,141 @@
+div.tabela-periodica > table {
+    /*max-width: 640px;
+    min-width: 640px;*/
+    border-collapse: collapse;
+    text-align: center;
+}
+
+div.tabela-periodica .elemento,
+div.tabela-periodica .grupo,
+div.tabela-periodica .periodo,
+div.tabela-periodica .especial,
+div.tabela-periodica .legenda,
+div.tabela-periodica .vazio {
+    max-width: 90px;
+    min-width: 90px;
+    max-height: 90px;
+    min-height: 90px;
+    overflow: hidden;
+}
+
+div.tabela-periodica td,
+div.tabela-periodica th {
+    padding: 0;
+    line-height: 1em;
+    vertical-align: middle;
+}
+
+div.tabela-periodica td.elemento {
+    padding-bottom: 2px;
+}
+
+div.tabela-periodica .elemento table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+div.tabela-periodica .elemento,
+div.tabela-periodica td.especial,
+div.tabela-periodica .legenda {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+}
+
+div.tabela-periodica .gas-nobre {
+    background-color: purple;
+    color: white;
+}
+
+div.tabela-periodica .alcalino {
+    background-color: #ff8000;
+}
+
+div.tabela-periodica .terroso {
+    background-color: #ffc000;
+}
+
+div.tabela-periodica .transicao {
+    background-color: yellow;
+}
+
+div.tabela-periodica .postrans {
+    background-color: #c0ff00;
+}
+
+div.tabela-periodica .semimetal {
+    background-color: lime;
+}
+
+div.tabela-periodica .nao-metal {
+    background-color: cyan;
+}
+
+div.tabela-periodica .halogenio {
+    background-color: #ff80ff;
+}
+
+div.tabela-periodica .lantanio {
+    background-color: #ffc080;
+}
+
+div.tabela-periodica .actinio {
+    background-color: #c080ff;
+}
+
+div.tabela-periodica .naosabe {
+    background-color: silver;
+}
+
+div.tabela-periodica .grupo,
+div.tabela-periodica .periodo,
+div.tabela-periodica th.especial {
+    border-style: none;
+}
+
+div.tabela-periodica .grupo,
+div.tabela-periodica .periodo,
+div.tabela-periodica .especial {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+div.tabela-periodica .legenda {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+div.tabela-periodica .elemento .eletrons {
+    font-size: 13px;
+    min-width: 15%;
+    max-width: 15%;
+    max-height: 12px;
+    min-height: 12px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+div.tabela-periodica .elemento .eletrons:first-child {
+    visibility: hidden;
+}
+
+div.tabela-periodica .elemento .numero {
+    font-size: 12px;
+    min-width: 70%;
+    max-width: 70%;
+    font-weight: bold;
+}
+
+div.tabela-periodica .elemento .simbolo {
+    font-size: 35px;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+div.tabela-periodica .elemento .nome {
+    font-size: 14px;
+    font-weight: bold;
+}

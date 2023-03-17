@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&family=Caveat&family=Lobster&family=Rochester&family=Seaweed+Script&display=swap");
+
+@font-face {
+    font-family: "Chopin Script";
+    src: url(../fontes/ChopinScript-eZRn.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Fairy Playground";
+    src: url(../fontes/FairyPlayground-8MeWA.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Slime Box";
+    src: url(../fontes/SlimeBox-GWMD.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Ipanema Secco";
+    src: url(../fontes/IpanemaSecco-463W.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Royal";
+    src: url(../fontes/Royal-7B3K.ttf) format("truetype");
+}
