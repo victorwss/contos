@@ -9,26 +9,121 @@
         <link rel="stylesheet" href="css/imagens.css">
         <link rel="stylesheet" href="css/indice.css">
         <link rel="stylesheet" href="css/periodica.css">
+        <link rel="stylesheet" href="css/fixed-absolute.css">
     </head>
     <body>
-        <aside id="indice">
+        <nav id="indice">
             <h1>😊 Escolha um dos itens:</h1>
             <ul>
+                <li>🔧 <a href="#posicionamento-com-css">Posicionamento com CSS</a></li>
                 <li>👧🏻 <a href="#branca-de-neve">Branca de Neve e os 7 anões</a></li>
                 <li>🐖 <a href="#os-tres-porquinhos">Os três porquinhos</a></li>
                 <li>🔺 <a href="#chapeuzinho-vermelho">Chapeuzinho Vermelho</a></li>
                 <li>🔔 <a href="#anunciacao">Anunciação</a></li>
-                <li>❤️ <a href="#andanca">Andança</a></li>
+                <li>🌎 <a href="#andanca">Andança</a></li>
                 <li>👑 <a href="#dancing-queen">Dancing Queen</a></li>
                 <li>🍰 <a href="#bolo">Bolo de chocolate</a></li>
                 <li>✝️ <a href="#pai-nosso">Pater Noster</a></li>
                 <li>⚗️ <a href="#tabela-periodica">Tabela periódica</a></li>
+                <li>❤️ <a href="#bad-romance">Bad Romance</a></li>
             </ul>
-        </aside>
+        </nav>
+        <article id="posicionamento-com-css">
+            <h1>Posicionamento com CSS</h1>
+            <p>
+                Os elementos são posicionados normalmente de acordo com um fluxo, um após o outro.
+            </p>
+            <p>
+                No entanto, este comportamento pode ser mudado.
+                Existem os seguintes tipos de posicionamento em CSS:
+                <code>static</code>, <code>fixed</code>, <code>sticky</code>,
+                <code>relative</code> e <code>absolute</code>.
+            </p>
+            <p>
+                Esses são os valores válidos para a propriedade CSS
+                <code>position</code>
+                e são definidas da seguinte forma:
+            </p>
+            <pre>
+.seletor {
+    position: static;
+}</pre>
+            <p>O funcionamento é esse:</p>
+            <ul>
+                <li>
+                    O <code>position: static;</code> é o padrão, e é o que vale quando nenhum for declarado:
+                    Segue o fluxo.
+                </li>
+                <li>
+                    O <code>position: relative;</code> desloca um elemento em relação a sua posição original,
+                    mas os demais elementos ao redor ainda são posicionados como se ele tivesse sido posicionado
+                    com o padrão (<code>position: static;</code>).
+                </li>
+                <li>
+                    O <code>position: sticky;</code> muda o posicionamento do elemento
+                    se o seu container estiver parcialmente fora da tela (normalmente por causa de scrolling).
+                    O elemento pode ser empurrado para cima ou para baixo dentro de seu container para que não
+                    apareça fora da tela.
+                </li>
+                <li>
+                    O <code>position: fixed;</code> retira o elemento do fluxo normal e o coloca numa posição
+                    fixa na tela.
+                </li>
+                <li>
+                    O <code>position: absolute;</code> retira o elemento do fluxo normal, mas o coloca numa
+                    posição fixa em relação a um outro elemento que o contenha. No caso, será escolhido o
+                    primeiro elemento que o contenha (pai, avô, etc) que não tenha o posicionamento
+                    <code>static</code> ou o elemento <code>&lt;body&gt;</code> em último caso.
+                </li>
+            </ul>
+            <p>
+                A propriedade <code>position</code> define <strong>como</strong> o elemento será posicionado.
+                Use-a junto com as propriedades <code>top</code>, <code>bottom</code>, <code>left</code>
+                e/ou <code>right</code> para controlar <strong>onde</strong> ele vai ser posicionado.
+            </p>
+            <p>Nesta página, temos exemplos de todos esses casos:</p>
+            <ul>
+                <li>
+                    Os títulos <code>&lt;h1&gt;</code> estão com <code>position: sticky;</code>
+                    para ficarem visíveis na parte de cima dos elementos <code>&lt;article&gt;</code>
+                    que os contêm mesmo quando forem "scrollados" parcialmente para fora da tela.
+                </li>
+                <li>
+                    Alguns desses <code>&lt;article&gt;</code>s também têm um <code>&lt;footer&gt;</code>
+                    com <code>position: sticky;</code> para ficarem visíveis na parte de baixo mesmo quando
+                    os elementos que os contêm forem "scrollados" parcialmente para fora da tela.
+                </li>
+                <li>
+                    O elemento <code>&lt;article&gt;</code> com a música da
+                    Lady Gaga (<a href="#bad-romance">Bad Romance</a>)
+                    tem dois elementos com <code>position: sticky;</code> para ficarem no topo.
+                </li>
+                <li>
+                    A <code>&lt;div&gt;</code> com a mensagem de cookies tem <code>position: fixed;</code>.
+                </li>
+                <li>
+                    A <code>&lt;div&gt;</code> de estações do ano tem <code>position: absolute;</code>
+                    e não tem elemento predecessor que não seja <code>position: static;</code>.
+                </li>
+                <li>
+                    Os elementos <code>&lt;blockquote&gt;</code> têm <code>position: relative;</code>
+                    para que as aspas dentro deles, que têm <code>position: absolute;</code>, sejam
+                    posicionadas corretamente.
+                </li>
+                <li>
+                    O título da <a href="#tabela-periodica">tabela periódica</a> está com
+                    <code>position: static;</code> explícito, o que
+                    sobrepõe e remove o <code>position: sticky;</code>.
+                </li>
+                <li>
+                    Todos os demais elementos são <code>position: static;</code> por padrão.
+                </li>
+            </ul>
+        </article>
         <article id="branca-de-neve" class="conto">
             <h1>Branca de Neve e os 7 anões</h1>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Franz_Jüttner_Schneewittchen_4.jpg/775px-Franz_Jüttner_Schneewittchen_4.jpg" width="300" alt="Branca de Neve" />
+                <img src="img/Branca_de_neve.jpg" width="300" alt="Branca de Neve" />
                 <figcaption>Branca de Neve (Franz Jüttner, 1904)</figcaption>
             </figure>
             <p>Era uma vez uma princesa, muito bela e de pele branquinha, chamada Branca de Neve. A mãe de Branca de Neve, uma bondosa rainha, havia morrido quando ela era ainda um bebê.</p>
@@ -78,7 +173,7 @@
         <article id="os-tres-porquinhos" class="conto">
             <h1>Os três porquinhos</h1>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Three_little_pigs_1904_straw_house.jpg/471px-Three_little_pigs_1904_straw_house.jpg" width="300" alt="Os três porquinhos" />
+                <img src="img/Three_little_pigs_1904_straw_house.jpg" width="300" alt="Os três porquinhos" />
                 <figcaption>Os três porquinhos (Leonard Leslie Brooke, 1904)</figcaption>
             </figure>
             <p>Era uma vez uma feliz família de porquinhos que tinha três filhos. Os porquinhos foram crescendo e os pais notavam que estavam muito dependentes. Não ajudavam no trabalho de casa nem se esforçavam em nada. Então um dia, eles se reuniram e decidiram que os porquinhos, que já estavam bem crescidos, fossem morar sozinhos. Os pais deram um pouco de dinheiro a cada um, alguns bons conselhos. Os três porquinhos partiram para o bosque em busca de um bom lugar para construir, cada um, a sua casa.</p>
@@ -118,7 +213,7 @@
         <article id="chapeuzinho-vermelho" class="conto">
             <h1>Chapeuzinho Vermelho</h1>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Little_Red_Riding_Hood_Otto_Kubel.jpg/396px-Little_Red_Riding_Hood_Otto_Kubel.jpg" width="300" alt="Chapeuzinho Vermelho" />
+                <img src="img/Little_Red_Riding_Hood_Otto_Kubel.jpg" width="300" alt="Chapeuzinho Vermelho" />
                 <figcaption>Chapeuzinho Vermelho (Otto Kubel, 1930?)</figcaption>
             </figure>
             <p>Era uma vez uma doce menininha. Todos a chamavam de Chapeuzinho Vermelho, porque ela sempre usava uma capa vermelha que a sua avó havia lhe dado de presente.</p>
@@ -173,7 +268,7 @@
             <h1>Anunciação</h1>
             <h2>Alceu Valença - 1983</h2>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Alceu_Valença.jpg" width="300" alt="Alceu Valença" />
+                <img src="img/Alceu_Valença.jpg" width="300" alt="Alceu Valença" />
                 <figcaption>Alceu Valença</figcaption>
             </figure>
             <div class="estrofe">
@@ -247,13 +342,14 @@
                 <p>Ah ah ah ah ah ah</p>
                 <p>Ah ah ah ah ah ah</p>
             </div>
+            <footer>Alceu Valença - 1983</footer>
         </article>
 
         <article id="andanca" class="versos">
             <h1>Andança</h1>
             <h2>Beth Carvalho - 1969</h2>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Beth_Carvalho_%282011%29.jpg" width="300" alt="Beth Carvalho" />
+                <img src="img/Beth_Carvalho_%282011%29.jpg" width="300" alt="Beth Carvalho" />
                 <figcaption>Beth Carvalho</figcaption>
             </figure>
             <div class="estrofe">
@@ -312,13 +408,14 @@
                 <p>(Me leva, amor)</p>
                 <p>(Por onde for, quero ser seu par)</p>
             </div>
+            <footer>Beth Carvalho - 1969</footer>
         </article>
 
         <article id="dancing-queen" class="versos">
             <h1>Dancing Queen</h1>
             <h2>Abba - 1976</h2>
             <figure>
-                <img src="https://i.scdn.co/image/ab67616d0000b273c5f691e7762034fb8b340082" width="300" alt="Abba" />
+                <img src="img/abba.jpeg" width="400" alt="Abba" />
                 <figcaption>Abba</figcaption>
             </figure>
             <div class="estrofe">
@@ -378,43 +475,52 @@
                 <p>Digging the dancing queen</p>
                 <p>Digging the dancing queen</p>
             </div>
+            <footer>Abba - 1976</footer>
         </article>
 
         <article id="bolo">
             <h1>Bolo de chocolate</h1>
             <figure>
-                <img src="https://img.itdg.com.br/tdg/images/recipes/000/062/547/16232/16232_original.jpg?mode=crop&width=710&height=400" width="300" alt="Bolo de chocolate" />
+                <img src="img/bolo.jpg" width="400" alt="Bolo de chocolate" />
                 <figcaption>Fica uma delícia!</figcaption>
             </figure>
-            <h2>Ingredientes da massa</h2>
-            <ul>
-                <li>4 ovos</li>
-                <li>4 colheres (sopa) de chocolate em pó</li>
-                <li>2 colheres (sopa) de manteiga</li>
-                <li>3 xícaras (chá) de farinha de trigo</li>
-                <li>2 xícaras (chá) de açúcar</li>
-                <li>2 colheres (sopa) de fermento</li>
-                <li>1 xícara (chá) de leite</li>
-            </ul>
-            <h2>Ingredientes da calda</h2>
-            <ul>
-                <li>2 colheres (sopa) de manteiga</li>
-                <li>7 colheres (sopa) de chocolate em pó</li>
-                <li>2 latas de creme de leite com soro</li>
-                <li>3 colheres (sopa) de açúcar</li>
-            </ul>
-            <h2>Modo de preparo</h2>
-            <ol>
-                <li>Para preparar a massa, adicione em um liquidificador os ovos, o chocolate em pó, a manteiga, a farinha de trigo, o açúcar e o leite, depois bata por 5 minutos.</li>
-                <li>Adicione o fermento à massa e misture com uma espátula delicadamente.</li>
-                <li>Em uma forma untada, despeje a massa e asse em forno médio (180 ºC) preaquecido por cerca de 40 minutos.</li>
-                <li>Para fazer a calda, em uma panela, aqueça a manteiga e misture o chocolate em pó até que esteja homogêneo.</li>
-                <li>Acrescente o creme de leite à calda e misture bem até obter uma consistência cremosa.</li>
-                <li>Desligue o fogo da panela.</li>
-                <li>Acrescente açúcar à calda.</li>
-            </ol>
-            <h2>Observações</h2>
-            <p>Não se esqueça de usar uma forma alta para essa receita: como leva duas colheres de fermento, ela cresce bastante! Outra solução pode ser colocar apenas uma colher de fermento e manter a sua receita em uma forma pequena.</p>
+            <section>
+                <h2>Ingredientes da massa</h2>
+                <ul>
+                    <li>4 ovos</li>
+                    <li>4 colheres (sopa) de chocolate em pó</li>
+                    <li>2 colheres (sopa) de manteiga</li>
+                    <li>3 xícaras (chá) de farinha de trigo</li>
+                    <li>2 xícaras (chá) de açúcar</li>
+                    <li>2 colheres (sopa) de fermento</li>
+                    <li>1 xícara (chá) de leite</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Ingredientes da calda</h2>
+                <ul>
+                    <li>2 colheres (sopa) de manteiga</li>
+                    <li>7 colheres (sopa) de chocolate em pó</li>
+                    <li>2 latas de creme de leite com soro</li>
+                    <li>3 colheres (sopa) de açúcar</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Modo de preparo</h2>
+                <ol>
+                    <li>Para preparar a massa, adicione em um liquidificador os ovos, o chocolate em pó, a manteiga, a farinha de trigo, o açúcar e o leite, depois bata por 5 minutos.</li>
+                    <li>Adicione o fermento à massa e misture com uma espátula delicadamente.</li>
+                    <li>Em uma forma untada, despeje a massa e asse em forno médio (180 ºC) preaquecido por cerca de 40 minutos.</li>
+                    <li>Para fazer a calda, em uma panela, aqueça a manteiga e misture o chocolate em pó até que esteja homogêneo.</li>
+                    <li>Acrescente o creme de leite à calda e misture bem até obter uma consistência cremosa.</li>
+                    <li>Desligue o fogo da panela.</li>
+                    <li>Acrescente açúcar à calda.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Observações</h2>
+                <p>Não se esqueça de usar uma forma alta para essa receita: como leva duas colheres de fermento, ela cresce bastante! Outra solução pode ser colocar apenas uma colher de fermento e manter a sua receita em uma forma pequena.</p>
+            </section>
         </article>
 
         <article id="pai-nosso" class="versos">
@@ -441,5 +547,172 @@
             <div class="tabela-periodica">
         </article>
         <script src="js/tabela-periodica.js"></script>
+
+        <article id="bad-romance" class="versos">
+            <h1>Bad Romance</h1>
+            <h2>Lady Gaga - 2008</h2>
+            <figure>
+                <img src="img/Lady_Gaga_-_Bad_Romance_003.webp" width="400" alt="Lady Gaga" />
+                <figcaption>Lady Gaga</figcaption>
+            </figure>
+            <div class="estrofe">
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Rah, rah-ah-ah-ah</p>
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Rah, rah-ah-ah-ah</p>
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your ugly, I want your disease</p>
+                <p>I want your everything as long as it's free</p>
+                <p>I want your love</p>
+            </div>
+            <div class="estrofe">
+                <p>Love, love, love, I want your love (hey)</p>
+                <p>I want your drama, the touch of your hand (hey)</p>
+                <p>I want your leather-studded kiss in the sand</p>
+                <p>I want your love</p>
+                <p>Love, love, love, I want your love (love, love, love)</p>
+                <p>(I want your love)</p>
+            </div>
+            <div class="estrofe">
+                <p>You know that I want you</p>
+                <p>And you know that I need you</p>
+                <p>I want it bad, your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your love, and I want your revenge</p>
+                <p>You and me could write a bad romance (oh-oh-oh-oh-oh)</p>
+                <p>I want your love and all your lover's revenge</p>
+                <p>You and me could write a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Rah, rah-ah-ah-ah</p>
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your horror, I want your design</p>
+                <p>'Cause you're a criminal as long as you're mine</p>
+                <p>I want your love</p>
+                <p>Love, love, love, I want your love</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your psycho, your vertigo shtick (hey)</p>
+                <p>Want you in my rear window, baby, you're sick</p>
+                <p>I want your love</p>
+                <p>Love, love, love, I want your love (love, love, love)</p>
+                <p>(I want your love)</p>
+            </div>
+            <div class="estrofe">
+                <p>You know that I want you</p>
+                <p>And you know that I need you ('cause I'm a free bitch, baby)</p>
+                <p>I want it bad, your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your love, and I want your revenge</p>
+                <p>You and me could write a bad romance (oh-oh-oh-oh-oh)</p>
+                <p>I want your love and all your lover's revenge</p>
+                <p>You and me could write a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>Caught in a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Rah, rah-ah-ah-ah</p>
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Rah, rah-ah-ah-ah</p>
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Walk, walk, fashion baby</p>
+                <p>Work it, move that bitch crazy</p>
+                <p>Walk, walk, fashion baby</p>
+                <p>Work it, move that bitch crazy</p>
+                <p>Walk, walk, fashion baby</p>
+                <p>Work it, move that bitch crazy</p>
+                <p>Walk, walk, passion baby</p>
+                <p>Work it, I'm a free bitch, baby</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your love, and I want your revenge</p>
+                <p>I want your love, I don't wanna be friends</p>
+                <p>J'veux ton amour, et je veux ta revanche</p>
+                <p>J'veux ton amour, I don't wanna be friends (oh-oh-oh-oh-oh, oh-oh-oh-oh)</p>
+                <p>No, I don't wanna be friends (oh-oh-oh, caught in a bad romance)</p>
+                <p>I don't wanna be friends (oh-oh-oh-oh-oh, oh-oh-oh-oh)</p>
+                <p>Want your bad romance (oh-oh-oh)</p>
+                <p>Caught in a bad romance</p>
+                <p>Want your bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>I want your love, and I want your revenge</p>
+                <p>You and me could write a bad romance (oh-oh-oh-oh-oh)</p>
+                <p>I want your love and all your lover's revenge</p>
+                <p>You and me could write a bad romance</p>
+            </div>
+            <div class="estrofe">
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>(Want your bad romance)</p>
+                <p>Caught in a bad romance</p>
+                <p>(Want your bad romance)</p>
+                <p>Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh</p>
+                <p>(Want your bad romance)</p>
+                <p>Caught in a bad romance</p>
+                <p>Rah, rah-ah-ah-ah</p>
+            </div>
+            <div class="estrofe">
+                <p>Roma, roma-ma</p>
+                <p>Gaga, ooh-la-la</p>
+                <p>Want your bad romance</p>
+            </div>
+            <footer>Lady Gaga - 2008</footer>
+        </article>
+
+        <div id="estacoes" class="posicao-especial">
+            <p>Este elemento está com <code>position: absolute;</code></p>
+            <p>E todos os elementos-pai são <code>static</code>.</p>
+            <p>As estações do ano são:</p>
+            <ul>
+                <li>Verão</li>
+                <li>Ouforno</li>
+                <li>Inferno</li>
+                <li>Queimavera</li>
+            </ul>
+        </div>
+
+        <div id="cookies" class="posicao-especial">
+            <p>Esta é uma mensagem irritante.</p>
+            <p>Nós queremos os seus cookies e vamos te atormentar até você concordar!</p>
+            <p><button>Tchau</button></p>
+        </div>
+        <script src="js/tchau.js"></script>
     </body>
 </html>

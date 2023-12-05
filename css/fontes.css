@@ -24,3 +24,8 @@
     font-family: "Royal";
     src: url(../fontes/Royal-7B3K.ttf) format("truetype");
 }
+
+@font-face {
+    font-family: "Cyber Rock";
+    src: url(../fontes/CyberRockRegular-nRJRg.ttf) format("truetype");
+}

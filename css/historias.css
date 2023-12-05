@@ -9,22 +9,45 @@ h1 {
     margin-bottom: 10px;
     line-height: 1em;
     clear: both;
-}
-
-h1 {
     font-size: 80px;
     margin-top: 0.5em;
     margin-bottom: 0.2em;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
-h2 {
+h2, footer {
     font-size: 50px;
     margin: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 50px;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 .versos h2 {
     text-align: right;
     float: right;
+}
+
+#posicionamento-com-css h1 {
+    background-color: lime;
+    border-color: black;
+    color: black;
+}
+
+#posicionamento-com-css li, #posicionamento-com-css p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#posicionamento-com-css strong {
+    text-decoration: underline;
 }
 
 #branca-de-neve h1 {
@@ -49,7 +72,7 @@ h2 {
 }
 
 #anunciacao h1 {
-    background-color: rgb(128, 255, 255);
+    background-color: rgb(192, 255, 255);
     border-color: rgb(0, 128, 128);
     color: rgb(0, 128, 128);
     padding-bottom: 0.15em;
@@ -63,7 +86,7 @@ h2 {
 }
 
 #pai-nosso h1 {
-    background-image: url("https://images.unsplash.com/photo-1601297183305-6df142704ea2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+    background-image: url("../img/nuvens.avif");
     background-size: cover;
     border-color: rgb(0, 0, 128);
     color: white;
@@ -80,7 +103,7 @@ h2 {
 #bolo h1 {
     background-color: rgb(128, 64, 0);
     border-color: rgb(96, 48, 0);
-    color: black;
+    color: white;
     padding-top: 0.1em;
 }
 
@@ -90,6 +113,20 @@ h2 {
     padding-top: 0.1em;
     padding-bottom: 0.2em;
     font-family: "Lobster";
+    position: static;
+}
+
+#bad-romance h1 {
+    background-color: pink;
+    border-color: black;
+    color: black;
+    padding-top: 0.1em;
+}
+
+#bad-romance figure {
+    position: sticky;
+    top: 106px;
+    z-index: 1;
 }
 
 #os-tres-porquinhos {
@@ -128,6 +165,10 @@ h2 {
     text-align: center;
 }
 
+#bad-romance {
+    font-family: "Cyber Rock";
+}
+
 .estrofe:not(article > .estrofe:first-of-type) {
     margin-top: 2em;
 }
@@ -140,7 +181,7 @@ h2 {
     text-indent: 0;
 }
 
-.conto > p:first-of-type::first-letter { */
+.conto > p:first-of-type::first-letter {
     font-family: "Royal";
     font-size: 400%;
     font-weight: normal;
@@ -155,22 +196,40 @@ h2 {
     text-indent: 1.25cm;
 }
 
-article p, li {
+article p, article li, nav li, pre {
     line-height: 1em;
     font-size: 200%;
     text-align: justify;
     margin: 0;
 }
 
-.conto blockquote {
-    position: relative;
-    padding: 0 80px;
-    border-radius: 20px;
+pre, .conto blockquote, code {
     border-style: solid;
     border-color: black;
     border-width: 1px;
     background-color: #eee;
+    color: black;
+}
+
+pre, .conto blockquote {
+    border-radius: 20px;
     display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+pre {
+    padding: 10px;
+}
+
+code {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.conto blockquote {
+    position: relative;
+    padding: 0 80px;
 }
 
 .conto blockquote::before, .conto blockquote::after {
@@ -200,4 +259,9 @@ article p, li {
 
 .conto blockquote p {
     text-indent: 0;
+}
+
+nav, article {
+    margin-left: 20px;
+    margin-right: 20px;
 }

@@ -1,24 +1,24 @@
 figure {
-    display: block;
+    display: table;
     float: right;
     margin-left: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 0;
     text-align: center;
-    max-width: 300px;
+    max-width: 400px;
     clear: right;
 }
 
 figure img {
     display: block;
-    max-width: 300px;
     height: auto;
     margin: 0;
 }
 
 figure figcaption {
-    display: block;
+    display: table-caption;
+    caption-side: bottom;
     font-family: Helvetica;
     font-size: 18pt;
     text-indent: 0;
