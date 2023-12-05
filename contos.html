@@ -26,6 +26,7 @@
                 <li>✝️ <a href="#pai-nosso">Pater Noster</a></li>
                 <li>⚗️ <a href="#tabela-periodica">Tabela periódica</a></li>
                 <li>❤️ <a href="#bad-romance">Bad Romance</a></li>
+                <li>♠️ <a href="#deslocados">Elementos deslocados</a></li>
             </ul>
         </nav>
         <article id="posicionamento-com-css">
@@ -62,8 +63,7 @@
                 <li>
                     O <code>position: sticky;</code> muda o posicionamento do elemento
                     se o seu container estiver parcialmente fora da tela (normalmente por causa de scrolling).
-                    O elemento pode ser empurrado para cima ou para baixo dentro de seu container para que não
-                    apareça fora da tela.
+                    O elemento pode ser empurrado para cima ou para baixo para que não apareça fora da tela.
                 </li>
                 <li>
                     O <code>position: fixed;</code> retira o elemento do fluxo normal e o coloca numa posição
@@ -78,8 +78,18 @@
             </ul>
             <p>
                 A propriedade <code>position</code> define <strong>como</strong> o elemento será posicionado.
-                Use-a junto com as propriedades <code>top</code>, <code>bottom</code>, <code>left</code>
-                e/ou <code>right</code> para controlar <strong>onde</strong> ele vai ser posicionado.
+                Use-a junto com as propriedades <code>top</code>, <code>bottom</code>, <code>left</code> e/ou
+                <code>right</code> para controlar <strong>onde</strong> ele vai ser posicionado.
+            </p>
+            <p>
+                Para controlar qual elemento aparece na frente de qual outro quando eles se sobreporem, use
+                a propriedade <code>z-index</code> com um número inteiro positivo ou negativo.
+                Os elementos com <code>z-index</code> maior aparecem na frente dos que tem <code>z-index</code>
+                menor quando estão diretamente dentro de um mesmo container.
+            </p>
+            <p>
+                As propriedades <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> e
+                <code>z-index</code> são ignoradas e não têm efeito em elementos com <code>position: static;</code>.
             </p>
             <p>Nesta página, temos exemplos de todos esses casos:</p>
             <ul>
@@ -111,9 +121,13 @@
                     posicionadas corretamente.
                 </li>
                 <li>
+                    A parte no final de <a href="#deslocados">elementos deslocados</a> apresenta
+                    elementos com <code>position: relative;</code>.
+                </li>
+                <li>
                     O título da <a href="#tabela-periodica">tabela periódica</a> está com
                     <code>position: static;</code> explícito, o que
-                    sobrepõe e remove o <code>position: sticky;</code>.
+                    sobrescreve e remove o <code>position: sticky;</code>.
                 </li>
                 <li>
                     Todos os demais elementos são <code>position: static;</code> por padrão.
@@ -714,5 +728,25 @@
             <p><button>Tchau</button></p>
         </div>
         <script src="js/tchau.js"></script>
+
+        <article id="deslocados">
+            <h1>Elementos deslocados</h1>
+            <p>
+                Alguns <span class="off1">elementos</span> que estão neste parágrafo tem
+                <code class="off2">position: relative;</code>,
+                e é por isso que aparecem deslocados de suas <span class="off3">posições</span> originais.
+            </p>
+            <p>
+                Baralho:
+            </p>
+            <div class="baralho">
+                <li><img src="img/As_ouros.png" width="200"></li>
+                <li class="carta-selecionada"><img src="img/02_paus.png" width="200"></li>
+                <li><img src="img/05_copas.png" width="200"></li>
+                <li><img src="img/03_espadas.png" width="200"></li>
+                <li class="carta-selecionada"><img src="img/J_ouros.png" width="200"></li>
+            </div>
+        </div>
+        <script src="js/carta.js" defer="true"></script>
     </body>
 </html>

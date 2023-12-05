@@ -129,6 +129,12 @@ footer {
     z-index: 1;
 }
 
+#deslocados h1 {
+    background-color: yellow;
+    border-color: blue;
+    color: blue;
+}
+
 #os-tres-porquinhos {
     font-family: "Slime Box";
 }

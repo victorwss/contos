@@ -44,3 +44,41 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.off1 {
+    position: relative;
+    top: 10px;
+}
+
+.off2 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.off3 {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+
+.baralho {
+    margin-top: 30px;
+}
+
+.baralho li {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+}
+
+.baralho li img {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 20px;
+}
+
+.carta-selecionada {
+    top: -30px;
+}
